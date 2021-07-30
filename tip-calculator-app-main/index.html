@@ -21,23 +21,23 @@
       <div class="tool-box">
         <div class="input-box">
           <div class="bill-amount">
-            <div class="input-title">Bill</div>
-            <input type="number" id="BillAmount">
+            <div class="input-title">Bill  <span class="inputStateSymbol" id="billSymbol">*</span></div>
+            <input type="number" id="BillAmount" placeholder="0" oninput="checkInput(); outputResult();">
           </div>
           <div class="tip-percent">
             <div class="input-title">Select Tip %</div>
             <div class="percent-container">
-              <button>5%</button>
-              <button>10%</button>
-              <button class="selected">15%</button>
-              <button>25%</button>
-              <button>50%</button>
-              <button class="custom">Custom</button>
+              <button id="5" onclick="selectPercentOption(5); outputResult();">5%</button>
+              <button id="10" onclick="selectPercentOption(10); outputResult();">10%</button>
+              <button class="selected" id="15" onclick="selectPercentOption(15); outputResult();">15%</button>
+              <button id="25" onclick="selectPercentOption(25); outputResult();">25%</button>
+              <button id="50" onclick="selectPercentOption(50); outputResult();">50%</button>
+              <button class="custom" id="custom">Custom</button>
             </div>
           </div>
           <div class="people">
-            <div class="input-title">Number of People</div>
-            <input type="number" id="NumberOfPeople">
+            <div class="input-title">Number of People  <span class="inputStateSymbol" id="peopleSymbol">*</span></div>
+            <input type="number" id="NumberOfPeople" placeholder="0" oninput="checkInput(); outputResult();">
           </div>
         </div>
         <div class="output-box">
@@ -45,17 +45,18 @@
             <div class="title-main">Tip Amount</div>
             <div class="title-sub">/ person</div>
           </div>
-          <div class="output-result">$4.27</div>
+          <div class="output-result" id="tipPerPerson">$0.00</div>
           <div class="tip-title">
             <div class="title-main">Total</div>
             <div class="title-sub">/ person</div>
           </div>
-          <div class="output-result">$32.79</div>
-          <button class="resetButton">Reset</button>
+          <div class="output-result" id="billPerPerson">$0.00</div>
+          <button class="resetButton" onclick="resetData();">Reset</button>
         </div>
       </div>
     </div>
   </div>
+  <script src="script.js"></script>
 </body>
 
 </html>

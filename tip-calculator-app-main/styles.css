@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 * {
     margin: 0%;
@@ -136,6 +136,10 @@ input[type=number]:focus {
     color: white;
 }
 
+.percent-container > button:not(.selected,.custom):hover{
+    box-shadow: 4px 4px 5px grey;
+}
+
 .custom {
     background-color: hsl(180, 37%, 97%);
     color: hsl(186, 14%, 43%);
@@ -194,4 +198,13 @@ input[type=number]:focus {
     border-width: 0px;
     border-radius: 5px;
     background-color: hsl(172, 67%, 45%);
+}
+
+.resetButton:hover {
+    box-shadow: 0px 0px 5px 2px #7f9c9f;
+}
+
+.inputStateSymbol {
+    color: #00494d;
+    font-weight: 700;
 }
