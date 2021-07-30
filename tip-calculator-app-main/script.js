@@ -20,7 +20,7 @@ function outputResult(){
 
         var totalTip = (billPercent/100) * totalBill;
         var tipPerPerson = totalTip / totalPeople;
-        var billPerPerson = totalBill / totalPeople;
+        var billPerPerson = (totalBill / totalPeople) + tipPerPerson;
 
         tipPerPersonBox.innerHTML = "$" + tipPerPerson.toFixed(2);
         billPerPersonBox.innerHTML = "$" + billPerPerson.toFixed(2);
